@@ -60,3 +60,5 @@ const count = (first, sign, second) => {
 
   console.log(result);
 };
+
+console.log(document.querySelector('.buttons').children[0]);

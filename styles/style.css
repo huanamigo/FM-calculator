@@ -29,10 +29,17 @@
   --bg-input: hsl(223, 31%, 20%);
   --bg-key: hsl(30, 25%, 89%);
   --bg-keypad: hsl(223, 31%, 20%);
+  --bg-key-red: hsl(6, 63%, 50%);
+  --bg-key-blue: hsl(225, 21%, 49%);
+
+  --bg-keypad-hover: #fff;
+  --bg-keypad-hover-gray: hsl(224, 51%, 76%);
 
   --text-white: hsl(0, 0%, 100%);
 
   --shadow-keypad: hsl(28, 16%, 65%);
+  --shadow-red: hsl(6, 70%, 34%);
+  --shadow-blue: hsl(224, 28%, 35%);
 }
 
 body {
@@ -50,6 +57,7 @@ body {
   max-width: 600px;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 7px;
 }
 
 .input {
@@ -79,8 +87,33 @@ body {
   box-shadow: 0px 5px var(--shadow-keypad);
 }
 
+.buttons button:nth-child(18) {
+  background-color: var(--bg-key-red);
+  border: solid 3px var(--bg-key-red);
+  box-shadow: 0px 5px var(--shadow-red);
+  color: white;
+}
+
+.buttons button:nth-child(18),
+.buttons button:nth-child(17) {
+  grid-column: span 2;
+}
+
+.buttons button:nth-child(4),
+.buttons button:nth-child(17) {
+  background-color: var(--bg-key-blue);
+  border: solid 3px var(--bg-key-blue);
+  box-shadow: 0px 5px var(--shadow-blue);
+  color: white;
+}
+
+.buttons > button:hover {
+  background-color: var(--bg-keypad-hover);
+  border: solid 3px var(--bg-keypad-hover);
+}
+
 .text-button {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .attribution {
