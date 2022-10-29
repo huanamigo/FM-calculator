@@ -52,11 +52,43 @@ body {
   font-size: 32px;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0 !important;
+  color: var(--text-white);
+}
+
+#theme {
+  display: inline;
+  width: 70px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 18px;
+}
+
+label::after {
+  position: absolute;
+  text-align: right;
+  word-spacing: 18px;
+  top: -20px;
+  font-size: 18px;
+  right: 0;
+  content: '1 2 3';
+  width: 100px;
+}
+
 .section {
   width: 90vw;
   max-width: 600px;
   padding: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 7px;
 }
 
